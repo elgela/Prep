@@ -1,9 +1,16 @@
 h1 {
     color: crimson;
+    text-align: center;
+}
+
+h3, h4 {
+    color: indianred;
+    text-align: center;
 }
 
 img {
     width: 400px;
+    
 }
 
 #thirdDiv {
@@ -16,4 +23,9 @@ img {
 #spanId {
     font-size: 25px;
     margin: 50px;
+    color: lightcoral;
+}
+
+body {
+    background-image: url("https://assets.soyhenry.com/logoOG.png");
 }
