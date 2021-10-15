@@ -30,15 +30,28 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-return palabras.join(" ");
+
+// return palabras.join(" ");
+var frase = palabras[0];
+for (var i = 1; i <palabras.length; i++) {
+  frase = frase + " " + palabras[i];
+}
+return frase;
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-if(array.includes(elemento)){
-  return true;
+  
+// if(array.includes(elemento)){
+//   return true;
+// }
+// return false;
+for(var i = 0; i < array.length; i++){
+  if(array[i] === elemento){
+    return true;
+  }
 }
 return false;
 }

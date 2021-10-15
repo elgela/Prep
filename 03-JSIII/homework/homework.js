@@ -9,12 +9,39 @@ function crearUsuario() {
   // Devuelve la clase
   // Tu código:
   
+// function Usuario(opciones){
+//   this.usuario = opciones.usuario,
+//   this.nombre = opciones.nombre,
+//   this.email = opciones.email,
+//   this.password = opciones.password
+// }
+//   Usuario.prototype.saludar = function(){
+//     return "Hola, mi nombre es " + this.nombre;
+//   }
+//   return Usuario;
+// }
+
+class Usuario {
+  constructor(opciones){
+    this.usuario = opciones.usuario,
+    this.nombre = opciones.nombre,
+    this.email = opciones.email,
+    this.password = opciones.password
+  }
+  saludar() {
+    return "Hola, mi nombre es" + " " + this.nombre;
+  }
+}
+return Usuario;
 }
 
 function agregarMetodoPrototype(ClaseInventada) {
   // Agrega un método al `prototype` de ClaseInventada
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
+ClaseInventada.prototype.saludar = function() {
+  return "Hello World!";
+}
 }
 
 function agregarStringInvertida() {
