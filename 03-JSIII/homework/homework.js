@@ -64,9 +64,11 @@ function agregarStringInvertida() {
   //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
 
   class Persona {
-    constructor(/*Escribir los argumentos que recibe el constructor*/) {
-      // Crea el constructor:
-
+    constructor(nombre, apellido, edad, domicilio) {
+     this.nombre = nombre,
+     this.apellido = apellido,
+     this.edad = edad,
+     this.domicilio = domicilio
     }
 }
 
@@ -75,6 +77,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
   // Tu código:
+  var Juan = new Persona("Juan", "Perez", 22, "Saavedra 123");
+  return new Persona;
 }
   
 function agregarMetodo() {
