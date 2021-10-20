@@ -203,8 +203,10 @@ function esPrimo(numero) {
   // Tu código:
     if(numero === 0 || numero === 1){
       return false;
-    } for(var i = 0; i < numero.length; i++){
-      if(i % i && i % 1){
+    } 
+    for(var i = 2; i < numero; i++){
+      if(numero % i === 0){
+        return false;
       }
     }
     return true;
@@ -215,7 +217,12 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  
+var veces = 0;
+while(veces < 8){
+  numero = numero + 5;
+  veces++;
+}
+  return numero;
 }
 
 
