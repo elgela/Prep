@@ -19,14 +19,18 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   // Tu código:
-  
+  var suma = 0;
+  for(var i = 0; i < numeros.length; i++){
+    suma += numeros[i];
+  }
+cb(suma)
 }
 
 function forEach(array, cb) {
   // Itera sobre el array "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada elemento el arreglo)
   // Tu código:
-
+array.forEach(cb);
 }
 
 function map(array, cb) {
@@ -34,6 +38,16 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   // Tu código:
 
+//   opcion 1
+// return array.map(cb);
+// }
+
+// opcion 2
+var newArray = [];
+for(var i = 0; i < array.length; i++){
+  newArray.push(cb(array[i]));
+}
+return newArray;
 }
 
 function filter(array) {
