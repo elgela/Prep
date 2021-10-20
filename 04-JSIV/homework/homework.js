@@ -38,17 +38,17 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   // Tu código:
 
-//   opcion 1
-// return array.map(cb);
-// }
+  // opcion 1
+return array.map(cb);
+}
 
-// opcion 2
-var newArray = [];
-for(var i = 0; i < array.length; i++){
-  newArray.push(cb(array[i]));
-}
-return newArray;
-}
+// // opcion 2
+// var newArray = [];
+// for(var i = 0; i < array.length; i++){
+//   newArray.push(cb(array[i]));
+// }
+// return newArray;
+// }
 
 function filter(array) {
   // Filtrar todos los elementos del array que comiencen con la letra "a".
