@@ -28,7 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-return x - y;
+  return x - y;
 }
 
 function sonIguales(x, y) {
@@ -38,7 +38,7 @@ function sonIguales(x, y) {
 if(x === y){
   return true;
 }
-  return false;
+return false;
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -75,13 +75,13 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // Ojo: No es raiz cuadrada!
   // Tu código:
-return Math.pow(num, 2)
+  return num * num;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-return Math.pow(num, exponent);
+  return Math.pow(num, exponent);
 }
 
 function esPositivo(numero) {
@@ -91,11 +91,9 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
 if(numero > 0){
   return "Es positivo";
-}
-if(numero < 0){
+} if(numero < 0){
   return "Es negativo";
-}
-if(numero === 0){
+} if(numero === 0){
   return false;
 }
 }
@@ -126,10 +124,10 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Tu código:
-if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-  return "Es vocal";
-} if(letra.length > 1){
+if(letra.length > 1){
   return "Dato incorrecto";
+} if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+  return "Es vocal";
 }
 }
 
@@ -138,12 +136,13 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-if(x > y){
+if(x === y){
+  return x;
+} if(x > y){
   return x;
 } if(x < y){
   return y;
-} if(x === y);
-return x || y;
+}
 }
 
 /*
@@ -166,17 +165,12 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   // Tu código:
-  switch(color){
-    case "blue":
-      return "This is blue";
-      case "red":
-        return "This is red";
-        case "green":
-          return "This is green";
-          case "orange":
-            return "This is orange";
-          default:
-            return "Color not found";
+  switch(color) {
+    case "blue": return "This is blue";
+    case "red": return "This is red";
+    case "green": return "This is green";
+    case "orange": return "This is orange";
+    default: return "Color not found";
   }
 }
 
@@ -209,8 +203,9 @@ function esPrimo(numero) {
   // Tu código:
     if(numero === 0 || numero === 1){
       return false;
-    } for(var i = 2; i < numero; i++){
-      if(numero %i === 0) return false;
+    } for(var i = 0; i < numero.length; i++){
+      if(i % i && i % 1){
+      }
     }
     return true;
   }
@@ -220,12 +215,14 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  var contador = 0;
-  do {
-    numero +=5;
-    contador++;
-  } while (contador < 8);
-  return numero;
+  var valorFinal = 0;
+  for(var i = 0; i < numero.length; i++){
+    do{
+      i += 5;
+      valorFinal.write(i);
+    } while (i < 8);
+  }
+  return valorFinal;
 }
 
 
