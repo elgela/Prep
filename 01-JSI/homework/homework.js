@@ -215,14 +215,7 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  var valorFinal = 0;
-  for(var i = 0; i < numero.length; i++){
-    do{
-      i += 5;
-      valorFinal.write(i);
-    } while (i < 8);
-  }
-  return valorFinal;
+  
 }
 
 
