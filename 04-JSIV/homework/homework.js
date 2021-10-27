@@ -55,7 +55,7 @@ function filter(array) {
   // Devolver un nuevo array con los elementos que cumplen la condición
   // Tu código:
   //   con .filter
-// var aPrimero=array.filter(element => element[0] === "a");
+// var aPrimero = array.filter(element => element[0] === "a");
 // return aPrimero;
 // }
 
@@ -82,14 +82,34 @@ function deObjetoArray(objeto){
      }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   // Tu código:
 
+  //   con   .entries()
+// return Object.entries(objeto);
+// }
+
+ // con for()
+ var newArray = [];
+for(var prop in objeto){
+  var tupla = [prop, objeto[prop]];
+  newArray.push(tupla);
+}
+return newArray;
 }
 
 function numberOfCharacters(string) {
-  // La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
+  // La función recibe un string. Recorre el string y devuelve el caracter con el número de veces que aparece 
   // en formato par clave-valor.
   // Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   // Tu código:
-
+var obj = {};
+for(var i = 0; i < string.length; i++){
+  if(!obj[string[i]]){
+    obj[string[i]] = 1;
+  }
+  else{
+    obj[string[i]] = obj[string[i]] + 1;
+  }
+}
+return obj;
 }
 
 function capicua(numero){
