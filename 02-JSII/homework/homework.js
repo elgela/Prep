@@ -3,7 +3,7 @@
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-return array[array.length -1];
+return array[array.length - 1];
 }
 
 function incrementarPorUno(array) {
@@ -20,8 +20,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-array.push(elemento);
-return array;
+ array.push(elemento);
+ return array;
 }
 
 function dePalabrasAFrase(palabras) {
@@ -33,8 +33,8 @@ function dePalabrasAFrase(palabras) {
 
 // return palabras.join(" ");
 var frase = palabras[0];
-for (var i = 1; i <palabras.length; i++) {
-  frase = frase + " " + palabras[i];
+for(var i = 1; i < palabras.length; i++){
+  frase = frase + ' ' + palabras[i];
 }
 return frase;
 }
@@ -51,7 +51,7 @@ function arrayContiene(array, elemento) {
 for(var i = 0; i < array.length; i++){
   if(array[i] === elemento){
     return true;
-  }
+  } 
 }
 return false;
 }
@@ -71,68 +71,69 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser un array de enteros
   // Devuelve el número más grande
   // Tu código:
-var masGrande = numeros[0];
-for(var i = 0; i < numeros.length; i++){
-  if(numeros[i] > masGrande){
-    masGrande = numeros[i];
+var max = numeros[0];
+for(var i = 1; i < numeros.length; i++){
+  if(numeros[i] > max){
+    max = numeros[i];
   }
 }
-return masGrande;
+return max;
 }
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
-var argu = 1;
-if(arguments.length === 0) return 0;
-for(var i = 0; i < arguments.length; i++){
-  argu = arguments[i] * argu;
-}
-return argu;
+ if(arguments.length === 0){
+   return 0;
+ }
+ var multiplicar = 1;
+ for(var i = 0; i < arguments.length; i++){
+   multiplicar = multiplicar * arguments[i];
+ }
+ return multiplicar;
 }
 
 function cuentoElementos(arreglo){
   // Realiza una función que retorne la cantidad de los elementos del arreglo que sean mayores a 18.
   // Tu código:
-var cantidad = [];
-for(var i = 0; i < arreglo.length; i++){
-  if(arreglo[i] > 18){
-    cantidad++
-  }
-}
-return cantidad;
+ var numero = 0;
+ for(var i = 0; i < arreglo.length; i++){
+   if(arreglo[i] > 18){
+     numero = numero + 1;
+   }
+ }
+ return numero;
 }
 
 function todosIguales(arreglo) {
   // Escriba la función todosIguales, si todos los elementos de un arreglo son iguales
   // retornar true, caso contrario retornar false.
   // Tu código:
-  for(var i = 0; i < arreglo.length; i++){
-    for(var j = 0; j < arreglo.length; j++){
-      if(arreglo[i] === arreglo[j] && i !== j){
-        return true;
-      }
-    }
+var comparacion = arreglo[0];
+for(var i = 1; i < arreglo.length; i++){
+  if(comparacion !== arreglo[i]){
     return false;
   }
+}
+return true;
 } 
 
 function mesesDelAño(array) {
   // Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   // Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-  // Tu código:
-var nuevoArray = [];
-for(var i = 0; i < array.length; i++){
-  if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
-    nuevoArray.push(array[i]);
-  } 
-}
-if(nuevoArray.length < 3){
-  return "No se encontraron los meses pedidos";
-}
-return nuevoArray;
+  // Tu código: 
+    var nuevoArray = [];
+    for(var i = 0; i < array.length; i++){
+      if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
+        nuevoArray.push(array[i]);
+      }
+    }
+    if(nuevoArray.length < 3){
+      return "No se encontraron los meses pedidos";
+    }
+    return nuevoArray;
 }
 
 function breakStatement(numero) {
@@ -143,16 +144,15 @@ function breakStatement(numero) {
   // devolver: "Se interrumpió la ejecución"
   // Pista: usá el statement 'break'
   // Tu código:
-var newArray = [];
+var arr = [];
 for(var i = 0; i < 10; i++){
+    numero = numero + 2;    
   if(i === numero) break;
-  numero = numero + 2;
-  newArray.push(numero);
-}
-if(i < 10){
+    arr.push(numero);
+} if(i < 10){
   return "Se interrumpió la ejecución";
 }
-return newArray;
+return arr;
 }
 
 function continueStatement(numero) {
@@ -163,13 +163,13 @@ function continueStatement(numero) {
   // y se continua con la siguiente iteración
   // Pista: usá el statement 'continue'
   // Tu código:
-  var nuevoValor = [];
-  for(var i = 0; i < 10; i++){
-    numero = numero + 2;
-    if(i === 5) continue;
-    nuevoValor.push(numero);
-  }
-  return nuevoValor;
+var arr = [];
+for(var i = 0; i < 10; i++){
+  numero = numero + 2;
+  if(i === 5) continue;
+  arr.push(numero);
+}
+return arr;
 }
 
 function crearGato(nombre, edad) {
@@ -193,8 +193,7 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-objeto[property] = null;
-
+objeto[property] = null
 return objeto;
 }
 
@@ -210,7 +209,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-return objetoMisterioso.numeroMisterioso * 5
+producto = objetoMisterioso.numeroMisterioso * 5;
+return producto;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -218,8 +218,8 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto[unaPropiedad];
-  return objeto;
+ delete objeto[unaPropiedad];
+ return objeto;
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -269,8 +269,8 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // Tu código:
 usuario.amigos.push(nuevoAmigo);
-return usuario;
-}
+  return usuario;
+} 
 
 function sumarLikesDeUsuario(usuario) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
