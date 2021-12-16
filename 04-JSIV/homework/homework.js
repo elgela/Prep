@@ -43,7 +43,13 @@ function filter(array) {
   // Filtrar todos los elementos del array que comiencen con la letra "a".
   // Devolver un nuevo array con los elementos que cumplen la condición
   // Tu código:
- 
+  var letra = [];
+  for(var i = 0; i < array.length; i++){
+    if(array[i][0] === "a"){
+      letra.push(array[i]);
+    }
+  }
+  return letra;
 }
 
 // ---- Ejercicios de Repaso ----
@@ -58,7 +64,7 @@ function deObjetoArray(objeto){
       C: 3
      }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   // Tu código:
-
+return Object.entries(objeto);
 }
 
 function numberOfCharacters(string) {
