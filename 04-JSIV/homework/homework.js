@@ -72,7 +72,19 @@ function numberOfCharacters(string) {
   // en formato par clave-valor.
   // Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   // Tu código:
-
+ var array = [];
+ var obj ={};
+ var letras = "";
+ var cant = 0;
+ for(var i = 0; i < string.length; i++){
+   array.push(string[i]);
+ }
+ for(var x = 0; x < array.length; x++){
+   letras = array.filter((word) => word === array[x]);
+   cant = letras.length;
+   obj[letras[0]] = cant;
+ }
+ return obj;
 }
 
 function capicua(numero){
